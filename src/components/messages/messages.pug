@@ -1,0 +1,6 @@
+ul.messages
+    each message in messages
+        li.message(class=message.yours ? 'message_my' : undefined)
+            span.message__author= message.author
+            span.message__delimiter &nbsp;:&nbsp;
+            span.message__text= message.text
