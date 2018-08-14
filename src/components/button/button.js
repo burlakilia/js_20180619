@@ -1,15 +1,13 @@
 import {Component} from '../component';
 import style from './button.scss';
+import template from './button.pug';
 
 export class Button extends Component {
-  static get bemName() {
-    return 'messages'
-  }
+    static get bemName() {
+        return 'button';
+    }
 
-  render() {
-    this.node.innerHTML = `
-      <button class="button">${this.data.text}</button>
-    `;
-  }
-
+    render () {
+        super.render(template);
+    }
 }

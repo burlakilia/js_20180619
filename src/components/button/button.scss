@@ -1,3 +1,17 @@
 .button {
-  color: green;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #482, #4da126);
+  padding: 10px 25px;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(to bottom, lighten(#482, 5%), lighten(#4da126, 5%));
+  }
 }

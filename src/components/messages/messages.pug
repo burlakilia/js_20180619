@@ -1,0 +1,5 @@
+ul.messages
+    each message in messages
+        li.messages__item(data-yours= message.yours)
+            span.messages__author= message.author
+            span.messages__text!= `&mdash; ${message.text}`
