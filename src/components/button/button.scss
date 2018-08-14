@@ -1,3 +1,19 @@
 .button {
-  color: green;
+ 	margin: 0 auto;
+	text-align: center;
+	width: 185px;
+	color: #000;
+	text-transform: uppercase;
+	font: normal 15px 'Arial';
+	background-color: transparent;
+	border: solid 1px #717171;
+	border-radius: 5px;
+}
+.button-link {
+ 	margin: 0 auto;
+	text-align: center;
+	color: #1434f7;
+	font: normal 15px 'Arial';
+	background: none;
+	border: none;
 }

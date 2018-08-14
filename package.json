@@ -18,18 +18,19 @@
   },
   "homepage": "https://github.com/burlakilia/js_20180619#readme",
   "dependencies": {
-    "static-server": "^2.2.1",
+    "ajv": "^6.5.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "scss": "^0.2.4",
-    "webpack-cli": "^3.0.8",
     "css-loader": "^1.0.0",
     "node-sass": "^4.9.2",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.3",
+    "scss": "^0.2.4",
+    "static-server": "^2.2.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.1",
-    "pug": "^2.0.3",
-    "pug-loader": "^2.4.0"
+    "webpack-cli": "^3.0.8"
   }
 }
