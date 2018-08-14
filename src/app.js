@@ -1,22 +1,21 @@
 import template from './app.pug';
-import {wrap, getByElement} from './components';
 import data from './data/data';
 import {Router} from './modules/router';
 
+import {LoginView} from './views/login/login';
+import {SignupView} from './views/signup/signup';
 
 window.addEventListener('DOMContentLoaded', function () {
     document.body.innerHTML = template(data);
 
     let router = new Router();
 
+    let loginView = new LoginView(document.querySelector('.js-login_view'));
+    let signupView = new SignupView(document.querySelector('.js-signup_view'));
+
     router
-        .register('login', () => { console.log('login') })
-        .register('chat', () => { console.log('chat') })
-        .register('users', () => { console.log('users') })
-        .register('signup', () => { console.log('signup') });
+        .register('login', loginView)
+        .register('signup', signupView);
 
-
-    router.start(); 
-
-    wrap(document.body);
+    router.start();
 });

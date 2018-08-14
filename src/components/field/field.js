@@ -10,4 +10,9 @@ export class Field extends Component {
     get template() {
         return template;
     }
+
+    get value() {
+        return this.node.value;
+    }
+
 }

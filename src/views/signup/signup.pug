@@ -1,0 +1,22 @@
+form.singnup
+    h1.singnup__title Регистрация
+    .field(data-component='field', data-options={
+        "placeholder": "Login",
+        "type": "text",
+        "name": "login"
+    })
+    .field(data-component='field', data-options={
+        "placeholder": "Password",
+        "type": "password",
+        "name": "password"
+    })
+    .field(data-component='field', data-options={
+        "placeholder": "Password Repeat",
+        "type": "password",
+        "name": "password_repeat"
+    })
+    .button(data-component='button', data-options={
+        "text": "Button",
+        "type": "submit"
+    })
+    a(href="#login")= "Авторизация"

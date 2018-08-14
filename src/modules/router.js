@@ -7,29 +7,44 @@ export class Router {
     /**
      * Зарегестрировать новый маршрут
      * @param {string} path - путь
-     * @param {Function} callback - коллбек, который будет взыван при переходе на маршрут
+     * @param {View} view - модуль view который должен быть показан
      */
-    register(path, callback) {
-        this.cache[path] = callback;
+    register(path, view) {
+        this.cache[path] = view;
         return this;
     }
 
     onRoute(route) {
-        let fn = this.cache[route];
+        let view = this.cache[route];
 
-        if (!fn) {
+        if (!view) {
             console.error('Не известный маршрут', route);
             return;
         }
 
-        fn();
+        if (this.current) {
+            this.current.toggle(false);
+        }
+
+        if (!view.isRendered) {
+            view.render();
+        }
+
+        view.toggle(true);
+        this.current = view;
     }
 
     start() {
+
+        function getRouteFromHash() {
+            return location.hash.replace('#', '');
+        }
+
         window.addEventListener('hashchange', () => {
-            let route = location.hash.replace('#', '');
-            this.onRoute(route);
+            this.onRoute(getRouteFromHash());
         });
+
+        this.onRoute(getRouteFromHash());
     }
 
 
