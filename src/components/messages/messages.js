@@ -10,4 +10,6 @@ export class Messages extends Component {
     get template() {
         return template;
     }
+
+    // TODO добавить метод addMessage - который добавить новое сообщение в список
 }

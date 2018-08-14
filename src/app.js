@@ -13,6 +13,9 @@ window.addEventListener('DOMContentLoaded', function () {
     let loginView = new LoginView(document.querySelector('.js-login_view'));
     let signupView = new SignupView(document.querySelector('.js-signup_view'));
 
+
+    // TODO Добавить остальные view (chat, users)
+    // TODO Chat - должен уметь вставить сообщение в список сообщений при вводе и нажатии на Отправить
     router
         .register('login', loginView)
         .register('signup', signupView);

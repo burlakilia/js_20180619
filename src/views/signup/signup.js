@@ -8,6 +8,7 @@ export class SignupView extends View {
     }
 
     onSignup() {
+        // TODO добавить проверку password === passwordRepeat
         console.log( this.password.value , this.login.value);
     }
 

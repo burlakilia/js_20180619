@@ -8,6 +8,8 @@ export class LoginView extends View {
     }
 
     onLogin() {
+        // TODO добавить view chat - и после успешного перехода перебрасывать
+        // пользователя на chat (location.hash = "#chat")
         console.log( this.password.value , this.login.value);
     }
 

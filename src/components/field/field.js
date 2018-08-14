@@ -15,4 +15,7 @@ export class Field extends Component {
         return this.node.value;
     }
 
+
+    // TODO добавить метод показа ошибок (showError) и сделать верстку ошибок
+    // TODO при любом вводе в поле, ошибка должна скрываться
 }
