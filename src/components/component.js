@@ -4,9 +4,9 @@ export class Component {
         this.node = node;
     }
 
-    render (template) {
+    render () {
         let parent = document.createElement('div');
-        parent.innerHTML = template(this.data);
+        parent.innerHTML = this.template(this.data);
 
         let el = parent.firstElementChild;
         this.node.replaceWith(el);

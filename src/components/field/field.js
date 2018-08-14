@@ -7,7 +7,7 @@ export class Field extends Component {
         return 'field';
     }
 
-    render() {
-        super.render(template);
+    get template() {
+        return template;
     }
 }

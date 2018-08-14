@@ -7,7 +7,7 @@ export class Users extends Component {
         return 'users';
     }
 
-    render() {
-        super.render(template);
+    get template() {
+        return template;
     }
 }

@@ -7,7 +7,7 @@ export class Messages extends Component {
         return 'messages';
     }
 
-    render() {
-        super.render(template);
+    get template() {
+        return template;
     }
 }

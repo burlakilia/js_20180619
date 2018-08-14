@@ -7,7 +7,8 @@ export class Button extends Component {
         return 'button';
     }
 
-    render () {
-        super.render(template);
+    get template() {
+        return template;
     }
+
 }
