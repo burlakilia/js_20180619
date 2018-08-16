@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "author": "tanya",
+      "text": "hi",
+      "yours": false
+    },
+    {
+      "author": "ilia",
+      "text": "hi",
+      "yours": true
+    }
+  ],
+  "field": {
+    "placeholder": "placeholder"
+  },
+  "button": {
+      "text": "Button"
+    },
+  "users": [
+    "tanua",
+    "ilia",
+    "anton"
+  ]
+}

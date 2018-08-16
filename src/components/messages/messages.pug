@@ -1,0 +1,10 @@
+ul.messages
+    each message in messages
+        if (message.yours)
+            li.messages__item.messages__item_my
+                span.messages__author= message.author
+                span.messages__text!= `&mdash; ${message.text}`
+        else
+            li.messages__item
+                span.messages__author= message.author
+                span.messages__text!= `&mdash; ${message.text}`

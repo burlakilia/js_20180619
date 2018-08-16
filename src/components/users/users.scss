@@ -1,9 +1,13 @@
+
 .user-item {
 	text-align: left;
+	list-style-type: none;
 	color: #000;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal 15px 'Arial';
 }
 .users {
 	margin: 0 auto;
+	margin-top: 10px;
+    margin-bottom: 10px;
 }

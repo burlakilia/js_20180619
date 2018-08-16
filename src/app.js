@@ -1,32 +1,24 @@
-import template from "./app.pug";
-import {wrap, getByElement} from './components'
+import template from './app.pug';
+import data from './data/data';
+import {Router} from './modules/router';
+import {LoginView} from './views/login/login';
+import {SignupView} from './views/signup/signup';
 
 window.addEventListener('DOMContentLoaded', function () {
-	document.body.innerHTML = template();
-	wrap(document.body);
+    document.body.innerHTML = template(data);
 
-	console.log(document.body.querySelector('.messages'));
-	console.log(document.body.querySelector('.users'));
-	console.log(document.body.querySelector('.field'));
-	console.log(document.body.querySelector('.button'));
+    let router = new Router();
 
-	let messages = getByElement(document.body.querySelector('.messages'));
+    let loginView = new LoginView(document.querySelector('.js-login_view'));
+    let signupView = new SignupView(document.querySelector('.js-signup_view'));
 
-	messages.addMessage({
-		author: 'some',
-		text: 'aaaaaaa'
-	});
-	
-	let users = getByElement(document.body.querySelector('.users'));
 
-	users.addUser({
-		text: 'гость 1'
-	});
+    // TODO Добавить остальные view (chat, users)
+    // TODO Chat - должен уметь вставить сообщение в список сообщений при вводе и нажатии на Отправить
+    router
+        .register('login', loginView)
+        .register('signup', signupView);
 
-	let button = getByElement(document.body.querySelector('.button'));
-
-	button.addText({
-		text: 'войти'
-	});
-
+    router.start();
 });
+

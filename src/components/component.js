@@ -1,9 +1,8 @@
 export class Component {
-
-  	constructor({ data, node }) {
-    	this.data = data;
-    	this.node = node;
- 	}
+    constructor({data, node}) {
+        this.data = data;
+        this.node = node;
+    }
 
 	render() {
 		// Создаем родительский элемент, который нужен только
@@ -22,6 +21,5 @@ export class Component {
 		// меняем ссылку, так чтобы находить в Map
 		this.node = el;
 
-	}
-
+    }
 }

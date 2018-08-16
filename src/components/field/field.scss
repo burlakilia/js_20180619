@@ -1,12 +1,21 @@
 .field {
 	margin: 0 auto;
+	margin-top: 10px;
+    margin-bottom: 10px;
+	display: block;
 	padding-left: 15px;
 	width: 170px;
+	height: 30px;
 	text-align: left;
 	color: #000;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal 15px 'Arial';
 	background-color: #fff;
 	border: solid 1px #737373;
 	border-radius: 5px;
+	&::placeholder {
+		text-transform: capitalize;
+		font: normal 15px 'Arial';
+		color: #000;
+	}
 }

@@ -1,0 +1,17 @@
+form.login
+    h1.login__title Аваторизация
+    .field(data-component='field', data-options={
+        "placeholder": "Login",
+        "type": "text",
+        "name": "login"
+    })
+    .field(data-component='field', data-options={
+        "placeholder": "Password",
+        "type": "password",
+        "name": "password"
+    })
+    .button(data-component='button', data-options={
+        "text": "Button",
+        "type": "submit"
+    })
+    a(href="#signup")= "Регистрация"

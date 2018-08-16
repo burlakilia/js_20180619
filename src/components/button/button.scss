@@ -1,10 +1,14 @@
 .button {
  	margin: 0 auto;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
 	text-align: center;
 	width: 185px;
+	height: 30px;
 	color: #000;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font: normal 15px 'Arial';
+	cursor: pointer;
 	background-color: transparent;
 	border: solid 1px #717171;
 	border-radius: 5px;
