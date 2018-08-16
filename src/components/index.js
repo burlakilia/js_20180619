@@ -1,8 +1,12 @@
 import {Button} from './button/button';
+import {Field} from './field/field';
+import {Users} from './users/users';
 import {Messages} from "./messages/messages";
 
 let components = {
   [Button.bemName]: Button,
+  [Field.bemName]: Field,
+  [Users.bemName]: Users,
   [Messages.bemName]: Messages
 };
 

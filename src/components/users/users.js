@@ -1,15 +1,16 @@
 import {Component} from '../component';
 import style from './users.scss';
+import template from './users.pug';
 
 export class Users extends Component {
-	render() {
-		this.node.innerHTML = '\
-			<ul class='users'>\
-				<li class="user-item">${this.data.text}</li>\
-				<li class="user-item">${this.data.text}</li>\
-				<li class="user-item">${this.data.text}</li>\
-				<li class="user-item">${this.data.text}</li>\
-			</ul>'
-		;
+
+	static get bemName() {
+		return 'users'
 	}
+   
+	addUser(user) {
+        this.data.users.push(user);
+        this.render();
+    }
+
 }
