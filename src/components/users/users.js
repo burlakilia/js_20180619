@@ -3,6 +3,7 @@ import style from './users.scss';
 import template from './users.pug';
 
 export class Users extends Component {
+
     static get bemName() {
         return 'users';
     }
@@ -10,4 +11,5 @@ export class Users extends Component {
     get template() {
         return template;
     }
+
 }

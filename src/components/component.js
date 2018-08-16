@@ -4,12 +4,22 @@ export class Component {
         this.node = node;
     }
 
-    render () {
-        let parent = document.createElement('div');
-        parent.innerHTML = this.template(this.data);
+	render() {
+		// Создаем родительский элемент, который нужен только
+		// для преобразование строки в Element
+		let parent = document.createElement('div');
 
-        let el = parent.firstElementChild;
-        this.node.replaceWith(el);
-        this.node = el;
+		// преобразуем
+		parent.innerHTML = template(this.data);
+
+		// получаем наш элемент из parent
+		let el = parent.firstElementChild;
+
+		// заменяем корневой узел, но только что отрендереный
+		this.node.replaceWith(el);
+
+		// меняем ссылку, так чтобы находить в Map
+		this.node = el;
+
     }
 }

@@ -1,7 +1,6 @@
 import template from './app.pug';
 import data from './data/data';
 import {Router} from './modules/router';
-
 import {LoginView} from './views/login/login';
 import {SignupView} from './views/signup/signup';
 
@@ -22,3 +21,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
     router.start();
 });
+
