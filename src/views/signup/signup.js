@@ -1,6 +1,7 @@
 import {View} from '../view';
 import template from './signup.pug';
 import {getByElement} from '../../components/index';
+import {User} from '../../models/user';
 
 export class SignupView extends View {
     get template() {
@@ -8,17 +9,27 @@ export class SignupView extends View {
     }
 
     onSignup() {
-        // TODO добавить проверку password === passwordRepeat
-        console.log( this.password.value , this.login.value);
+        User.signup(
+            this.login.value,
+            this.password.value,
+            this.repeatPassword.value
+        ).then(user => {
+            return user.getAllUsers();
+        }).then(users => {
+            console.log(users);
+        });
+
     }
 
     onRenderComplete() {
+        this.repeatPassword = getByElement(this.node.querySelector('[name="password_repeat"]'));
         this.password = getByElement(this.node.querySelector('[name="password"]'));
         this.login = getByElement(this.node.querySelector('[name="login"]'));
 
+
         this.node.addEventListener('submit', event => {
-            this.onLogin();
             event.preventDefault();
+            this.onSignup();
         })
     }
 
